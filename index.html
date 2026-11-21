@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <h1>Smart Task Manager</h1>
+            <p>Manage your daily tasks efficiently.</p>
+        </header>
+
+        <!-- Task Input Section -->
+        <section class="task-input-section">
+
+            <h2>Add New Task</h2>
+
+        <form id="task-form">
+  <input
+    type="text"
+    id="task-input"
+    placeholder="Enter your task..."
+  >
+
+  <select id="task-priority">
+    <option value="high">High Priority</option>
+    <option value="medium" selected>Medium Priority</option>
+    <option value="low">Low Priority</option>
+  </select>
+
+  <button type="submit">Add Task</button>
+</form>
+
+        </section>
+
+        <!-- Task Statistics -->
+        <section class="task-stats">
+
+            <div class="stat-card">
+                <h3>Total Tasks</h3>
+                <p id="total-tasks">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Completed</h3>
+                <p id="completed-tasks">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Pending</h3>
+                <p id="pending-tasks">0</p>
+            </div>
+
+        </section>
+
+        <!-- Task List -->
+        <section class="task-list-section">
+
+            <h2>My Tasks</h2>
+            <div id="search-container">
+    <input
+        type="text"
+        id="search-input"
+        placeholder="Search tasks..."
+    >
+</div>
+            <div id="filter-buttons">
+    <button data-filter="all">All</button>
+    <button data-filter="pending">Pending</button>
+    <button data-filter="completed">Completed</button>
+</div>
+<div id="priority-filter-buttons">
+    <button data-priority="all">All Priorities</button>
+    <button data-priority="high">High</button>
+    <button data-priority="medium">Medium</button>
+    <button data-priority="low">Low</button>
+</div>
+            <ul id="task-list">
+                <!-- Tasks will appear here dynamically -->
+            </ul>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
